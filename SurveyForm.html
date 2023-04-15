@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+	<title>
+		ChatGPT
+	</title>
+
+	<style>
+
+
+		body {
+			
+			background-image: url("Purple.png");
+			background-repeat: no-repeat, repeat;
+			background-size: cover;
+			max-width: 100%;
+			max-height: auto;
+			font-style:Arial;
+			text-align: center;
+		}
+
+		form {
+			box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+			max-width: 700px;
+			margin: 50px auto;
+			padding: 30px 20px;
+			border-radius: 25px;
+			font-size: large;
+			background-color: #feeaeb83;
+			color: #222059;
+			
+		}
+
+		form::before{
+			content: '';
+			position: absolute;
+			top: -50%;
+			left: -50%;
+			width: 380px;
+			height: 480px;
+			background: linear-gradient(0deg,transparent,#BF4594,#BF4594);
+			transform-origin: bottom right;
+			animation: animate 6s linear infinite;
+		}
+
+		@keyframes animate{
+			0%{
+				transform: rotate(0deg);
+			}
+			100%{
+				transform: rotate(360deg);
+			}
+
+		}
+
+		.form-control {
+			text-align: left;
+			margin-bottom: 25px;
+		}
+		
+
+		input{
+			border-radius: 45px;	
+		}
+
+		.form-control label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		.form-control input,
+		.form-control select,
+		.form-control textarea {
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			padding: 10px;
+			display: block;
+			width: 95%;
+		}
+
+		.form-control input[type="radio"],
+		.form-control input[type="checkbox"] {
+			display: inline-block;
+			width: auto;
+		}
+
+		button {
+			background-color: #222059;
+			color: aliceblue;
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			font-size: 21px;
+			display: block;
+			width: 100%;
+			margin-top: 50px;
+			margin-bottom: 20px;
+			border-radius: 45px;
+		}
+		.eleven h1 {
+  			font-size:30px;
+			text-align:center; 
+			line-height:1.5em; 
+			padding-bottom:45px; 
+			font-family:"Brush Script MT", cursive; 
+			text-transform:uppercase;
+			letter-spacing: 2px;
+			color:aliceblue;
+		}
+
+
+		.eleven h1:before {
+  			position: absolute;
+  			left: 0;
+ 			top: 90px;
+  			width: 60%;
+  			left:50%; 
+			margin-left:-30%;
+ 			height: 1px;
+  			content: "";
+  			background-color: #777; z-index: 4;
+		}
+		.eleven h1:after {
+			position:absolute;
+  			width:40px; height:40px; left:50%; margin-left:-20px; 
+  			content: '\00a7'; font-size:30px; line-height:40px; color:red;
+  			font-weight:400; z-index: 5;
+  			display:block;
+  			background-color:#FEEAEB;
+}
+
+	</style>
+	<script defer src="js.js"></script>
+</head>
+
+<body>
+	<div class="eleven">
+		<h1>Survey to See How many Students use ChatGPT</h1>
+	  </div>
+
+	<!-- Create Form -->
+	<form id="form" name="form" action="thanks.html">
+
+		<!-- Details -->
+		<div class="form-control">
+			<label for="name" id="label-name">
+				Name
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="text"
+				id="name"
+				name="name"
+				placeholder="Enter your name" style="border-radius:10px"/>
+		</div>
+
+		<div class="form-control">
+			<label>	Phone Number</label><input type="text" name="number" id="number" placeholder="Enter your Mobile Number" style="border-radius:10px"/>
+		</div>
+
+		<div class="form-control">
+			<label for="age" id="label-age">
+				Age
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="text"
+				id="age"
+				name="age"
+				placeholder="Enter your age" style="border-radius:10px" />
+		</div>
+
+		<div class="form-control" >
+			<label for="role" id="label-role">
+				Graduation Course
+			</label>
+			
+			<!-- Dropdown options -->
+			<select name="role" id="role" style="border-radius:10px">
+				<option value="Computer">Computer Science</option>
+				<option value="it">IT</option>
+				<option value="ai">AI</option>
+				<option value="mechanical">Mechanical</option>
+				<option value="electronics">Electronics</option>
+				<option value="bba">BBA</option>
+				<option value="bca">BCA</option>
+				<option value="bcs">BCS</option>
+				<option value="mba">MBA</option>
+				<option value="mca">MCA</option>
+				<option value="mcs">MCS</option>
+			</select>
+		</div>
+
+		<div class="form-control">
+			<label>	Year of Study </label>
+
+			<!-- Input Type Radio Button -->
+			<label>
+				<input type="radio"	name="year">1<sup>st</sup>   Year</input>
+			</label>
+			<label>
+				<input type="radio"	name="year">2<sup>nd</sup>   Year</input>
+			</label>
+			<label>
+				<input type="radio"	name="year">3<sup>rd</sup>   Year</input>
+			</label>
+			<label>
+				<input type="radio"	name="year">4<sup>th</sup>   Year</input>
+			</label>
+		</div>
+
+		<div class="form-control">
+			<label>	How Frequently do you use ChaptGPT ?</label>
+			<label>
+				<input type="radio"	name="freq">Seldom</input>
+			</label>
+			<label>
+				<input type="radio"	name="freq">Regularly</input>
+			</label>
+		</div>
+
+		
+
+		<div class="form-control">
+			<label for="comment">
+				Role of ChatGPT in your Work/Life
+			</label>
+
+			<!-- multi-line text input control -->
+			<textarea name="comment" id="comment"
+				placeholder="Enter your comment here" style="border-radius:10px">
+			</textarea>
+		</div>
+
+		<div class="form-control">
+			<label>	Would you recommend ChatGPT to a friend? </label>
+
+			<!-- Input Type Radio Button -->
+			<label for="recommed-1">
+				<input type="radio"
+					id="recommed-1"
+					name="recommed">Yes</input>
+			</label>
+			<label for="recommed-2">
+				<input type="radio"
+					id="recommed-2"
+					name="recommed">No</input>
+			</label>
+			<label for="recommed-3">
+				<input type="radio"
+					id="recommed-3"
+					name="recommed">Maybe</input>
+			</label>
+		</div>
+
+
+		<button type="submit" name="submit" onclick="return IsEmpty()" value="submit">
+			Submit
+		</button>
+	</form>
+</body>
+
+</html>
